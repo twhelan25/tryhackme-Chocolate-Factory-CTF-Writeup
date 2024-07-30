@@ -59,4 +59,20 @@ stty rows 16 columns 138
 ```
 Taking a look at www-data's home directory we see validate.php, which includes a password for Charlie:
 ![charlie](https://github.com/user-attachments/assets/98932712-e5a2-4ebb-ba2c-3659b083fafd)
-I tried to switch users to charlie with this password but no luck. Must be a password for the original login on the web server. Let's see what else we can find...
+I tried to switch users to charlie with this password but no luck. Now that I think about it, the login on the web server displayed the validate.php function, so this is displaying the code behind that. Let's see what else we can find...
+The file key_rev_key contains a key that will can answer the questions with:
+![key_rev_key](https://github.com/user-attachments/assets/0f2222a6-1299-4d3a-a160-2bb78f147715)
+
+Next, let's go to charlie's home dir. We don't have the permissions to cat user.txt but teleport contains an rsa key, most likely for charlie.
+![rsa](https://github.com/user-attachments/assets/eddd0419-6723-46b8-893d-20a7bcb1b9d7)
+
+This rsa key gives us everything needed to ssh as charlie:
+![ssh](https://github.com/user-attachments/assets/1fb4f963-d1de-4885-9e05-979ce0ff0a6b)
+
+Let's cd to charlies home dir and get the user.txt.
+sudo -l looks interesting:
+![sudo -l](https://github.com/user-attachments/assets/a4a09f4f-0d89-403c-816d-59d2ab4e5c8d)
+
+Let's check that out on gtfobins.github.io
+It worked!
+![vi](https://github.com/user-attachments/assets/b9a17f0b-cfa4-4033-8b92-6453573789cd)
