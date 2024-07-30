@@ -76,3 +76,8 @@ sudo -l looks interesting:
 Let's check that out on gtfobins.github.io
 It worked!
 ![vi](https://github.com/user-attachments/assets/b9a17f0b-cfa4-4033-8b92-6453573789cd)
+Now, we are root but we still need to find the flag. Let's upgrade the shell with the previous python3 pty command, and head to the root dir. I tried running python3 root.py but it didn't work. Then I tried python root.py and we are now the proud owners of the Chocolate Factory! 
+
+![win](https://github.com/user-attachments/assets/2c32f827-80fd-4b8f-870c-1b342d436308)
+
+I hope you enjoyed this CTF writeup.  
