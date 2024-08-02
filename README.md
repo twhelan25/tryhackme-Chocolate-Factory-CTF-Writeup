@@ -75,7 +75,7 @@ This rsa key gives us everything needed to ssh as charlie:
 
 ![ssh](https://github.com/user-attachments/assets/1fb4f963-d1de-4885-9e05-979ce0ff0a6b)
 
-Let's cd to charlies home dir and get the user.txt.
+Let's cd to charlie's home dir and get the user.txt.
 sudo -l looks interesting:
 
 ![sudo -l](https://github.com/user-attachments/assets/a4a09f4f-0d89-403c-816d-59d2ab4e5c8d)
